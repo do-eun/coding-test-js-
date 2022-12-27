@@ -7,14 +7,27 @@
 
 let n = 10; //5
 
-function solution(a = 6, n) {
-  var gcd = (a, b) => {
-    if (b === 0) return a;
-    return gcd(b, a % b);
-  };
-
-  var lcm = (a, b) => {
-    return (a * b) / gcd(a, b);
-  };
-  return lcm / n;
+/**나의풀이 */
+function solution(n, b = 6) {
+  const gcd = (a, b) => (a % b === 0 ? b : gcd(b, a % b));
+  const lcm = (a, b) => (a * b) / gcd(a, b);
+  return lcm(n, b) / 6;
 }
+
+//최소공배수를 이용,,,그리고 파라미터값 디폴트를 지정
+
+/**다른 풀이 */
+const solution = (n) => {
+  let piece = 6;
+
+  while (true) {
+    if (piece % n === 0) {
+      break;
+    }
+    piece += 6;
+  }
+
+  return piece / 6;
+};
+
+//6조각으로 나눴을때 0이 나오면 break 아니라면 +6
