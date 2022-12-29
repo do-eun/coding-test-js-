@@ -1,6 +1,9 @@
-function solution(num, k) {
-  return String(num)
-    .split("")
-    .map((x) => Number(x))
-    .filter((x, i) => (x === k ? i : -1));
+function solution(i, j, k) {
+  let answer = 0;
+  for (a = i; a <= j; a++) {
+    if (String(a).indexOf(String(k))) {
+      answer += 1;
+    }
+  }
+  return answer;
 }
