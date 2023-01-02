@@ -1,9 +1,19 @@
-function solution(i, j, k) {
-  let answer = 0;
-  for (a = i; a <= j; a++) {
-    if (String(a).indexOf(String(k))) {
-      answer += 1;
-    }
+function solution(numbers) {
+  let num = [
+    "zero",
+    "one",
+    "two",
+    "three",
+    "four",
+    "five",
+    "six",
+    "seven",
+    "eight",
+    "nine",
+  ];
+  let answer = "";
+  for (i = 0; i < num.length; i++) {
+    answer = numbers.split(num[i]).join(i);
   }
   return answer;
 }
