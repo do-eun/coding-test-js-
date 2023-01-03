@@ -1,11 +1,15 @@
-function solution(balls, share) {
-  let n = 1;
-  for (i = balls; i > balls - share; i--) {
-    n *= i;
+function solution(id_pw, db) {
+  let answer = "";
+  for (i of db) {
+    if (id_pw[0] === i[0]) {
+      if (id_pw[1] === i[1]) {
+        answer = "login";
+        break;
+      }
+      answer = "login";
+      break;
+    } else {
+      answer = "login";
+    }
   }
-  let m = 1;
-  for (k = share; k > 0; k--) {
-    m *= k;
-  }
-  return n;
 }
