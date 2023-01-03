@@ -1,19 +1,11 @@
-function solution(numbers) {
-  let num = [
-    "zero",
-    "one",
-    "two",
-    "three",
-    "four",
-    "five",
-    "six",
-    "seven",
-    "eight",
-    "nine",
-  ];
-  let answer = "";
-  for (i = 0; i < num.length; i++) {
-    answer = numbers.split(num[i]).join(i);
+function solution(balls, share) {
+  let n = 1;
+  for (i = balls; i > balls - share; i--) {
+    n *= i;
   }
-  return answer;
+  let m = 1;
+  for (k = share; k > 0; k--) {
+    m *= k;
+  }
+  return n;
 }

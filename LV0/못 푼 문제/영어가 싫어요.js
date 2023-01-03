@@ -28,3 +28,6 @@ function solution(numbers) {
   }
   return Number(numbers);
 }
+
+//단어로 쪼개고 그 단어를 숫자로 매꿈
+//그리고 그것을 재할당
