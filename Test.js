@@ -1,8 +1,2 @@
-function solution(babbling) {
-  let can = ["aya", "ye", "woo", "ma"];
-  let answer = [];
-  for (i = 0; i < can.length; i++) {
-    answer.push(babbling.map((x) => x.split(can[i])));
-  }
-  return answer;
-}
+console.log(parseInt("10.12345")); //10
+console.log(Number("10.12345")); //10.12345
