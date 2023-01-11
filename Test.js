@@ -1,2 +1,7 @@
-console.log(parseInt("10.12345")); //10
-console.log(Number("10.12345")); //10.12345
+function solution(num) {
+  let answer = 0;
+  while (num != 1) {
+    num % 2 === 0 ? num / 2 : num * 3 + 1;
+  }
+  return answer;
+}
