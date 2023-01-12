@@ -1,7 +1,6 @@
-function solution(num) {
-  let answer = 0;
-  while (num != 1) {
-    num % 2 === 0 ? num / 2 : num * 3 + 1;
-  }
-  return answer;
+function solution(s) {
+  let answer = [...s].every((x) => !isNaN(x));
+  return s.length === 6 || s.length === 4 ? answer : false;
 }
+
+//각 글자마다 살펴봐야함. e가 숫자 사이에 있으면 숫자로 인식
